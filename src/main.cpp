@@ -1,13 +1,13 @@
 #include<iostream>
-#include "menu.h"
+#include "../headers/screens/InitialMenu.h"
 
 
 using namespace std;
 
 int main(){
 
-Menu menu;
-menu.showMenu();
+InitialMenu initialMenu;
+initialMenu.showMenu();
 
     return 0;
 }
