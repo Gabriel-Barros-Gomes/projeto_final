@@ -1,24 +1,17 @@
-#ifndef MENU_H_INCLUDED
-#define MENU_H_INCLUDED
-#include<iostream>
-using namespace std;
+#include "../headers/screens/InitialMenu.h"
 
-class Menu
-{
-private:
-    int option;
+    InitialMenu::InitialMenu(){
+        option = 0;
+    }
 
-public:
-    Menu();
-
-    void setOption(int _option){
+    void InitialMenu::setOption(int _option){
         option = _option;
     }
-    int getOption(){
+    int InitialMenu::getOption(){
         return option;
     }
 
-    void showMenu(){
+    void InitialMenu::showMenu(){
         int options;
 
         cout<<"Software's name"<<endl;  
@@ -30,11 +23,11 @@ public:
         switch (getOption())
         {
         case 1:
-            cout<<"opcao1"<<endl;
+            cout<<"Gerente"<<endl;
         case 2:
-            cout<<"opcao2"<<endl;
+            cout<<"Cliente"<<endl;
         case 3:
-            cout<<"opcao3"<<endl;
+            cout<<"Cozinha"<<endl;
         
         default:
             break;
@@ -42,8 +35,3 @@ public:
         
 
     }
-    
-};
-
-
-#endif
