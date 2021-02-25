@@ -31,7 +31,7 @@ pedido, colocar alguma observação caso necessário e finalizá-lo. Após a
 conclusão, ele consegue verificar o status de seu pedido até este ficar
 pronto.
 ```
-### USO
+### Uso
 ```
 Aplicação em desenvolvimento
 ```
