@@ -12,12 +12,13 @@ private:
 
 public:
     InitialMenu();
+    ~InitialMenu();
 
-    void setOption(int _option){}
+    void setOption(int);
     
-    int getOption(){}
+    int getOption();
 
-    void showMenu(){}
+    void showMenu();
 };
 
 
