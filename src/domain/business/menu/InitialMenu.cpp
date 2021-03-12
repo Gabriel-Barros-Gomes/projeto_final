@@ -1,4 +1,5 @@
-#include"InitialMenu.h"
+#include "InitialMenu.h"
+#include "../mananger/Mananger.h"
 
     InitialMenu::InitialMenu(){
         option = 0;
@@ -25,6 +26,8 @@
             cout<<"1 - Gerente"<<endl;
             cout<<"2 - Cliente"<<endl;
             cout<<"3 - Cozinha"<<endl;
+
+            cout<<"Digite o numero da Opção"<<endl;
             int _option;
             cin >> _option;
             setOption(_option);
@@ -36,12 +39,13 @@
 
         }
 
+Mananger mananger;
         
 
         switch (getOption())
         {
         case 1:
-            cout<<"Gerente"<<endl;
+            mananger.showMananger();
         case 2:
             cout<<"Cliente"<<endl;
         case 3:
