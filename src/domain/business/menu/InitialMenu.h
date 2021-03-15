@@ -1,5 +1,5 @@
-#ifndef INITIALMENU_H_INCLUDED
-#define INITIALMENU_H_INCLUDED
+#ifndef _INITIALMENU_H_
+#define _INITIALMENU_H_
 
 
 #include<iostream>
