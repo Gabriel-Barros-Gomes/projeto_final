@@ -1,6 +1,5 @@
-#ifndef MANANGER_H_INCLUDED
-#define MANANGER_H_INCLUDED
-
+#ifndef _MANANGER_H_
+#define _MANANGER_H_
 
 #include<iostream>
 using namespace std;
