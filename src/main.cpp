@@ -34,7 +34,7 @@ public:
             cout<<"Selecione Uma das Opcões abaixo:"<<endl;
             cout<<"1 - Gerente"<<endl;
             cout<<"2 - Cliente"<<endl;
-            cout<<"3 - Cozinha"<<endl;
+            cout<<"3 - Cheff"<<endl;
 
             cout<<"Digite o numero da Opção"<<endl;
             int _option;
