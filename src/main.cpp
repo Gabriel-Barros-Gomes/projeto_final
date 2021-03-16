@@ -42,6 +42,8 @@ public:
             setOption(_option);
             if(!(getOption() == 1 || getOption() == 2 || getOption() == 3)){
                 cout<<"Opção Inválida"<<endl;
+                system("pause");
+                system("cls");
             }else{
                 if(getOption() == 1){
                     system("cd bin");
@@ -55,7 +57,7 @@ public:
                     system("cd bin");
                     system("cheff.exe");
                 }
-                optionVerify = true;
+                system("cls");
             }
 
         }
@@ -70,9 +72,6 @@ setlocale(LC_ALL,"portuguese");
 
 InitialMenu initialMenu;
 initialMenu.showMenu();
-
-cout<<"Esta tela será fechada"<<endl;
-system("pause");
 
     return 0;
 }
