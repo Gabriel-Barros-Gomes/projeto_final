@@ -68,7 +68,8 @@ public:
 };
 
 int main(){
-setlocale(LC_ALL,"portuguese");
+setlocale(LC_ALL,"Portuguese");
+system ("pause");
 
 InitialMenu initialMenu;
 initialMenu.showMenu();
