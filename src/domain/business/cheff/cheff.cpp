@@ -57,20 +57,20 @@ Cheff::~Cheff(){
 void Cheff::showCheff(){
     bool optionVerify = false;
     cout << "cheff" << endl;
-    cout << "Faça apenas um pedido por vez!" << endl;
+    cout << "Faca apenas um pedido por vez!" << endl;
 
         while(optionVerify == false){
            
-            cout<<"Selecione uma das opcões abaixo:"<< endl;
+            cout<<"Selecione uma das opcoes abaixo:"<< endl;
             cout<<"1 - Abrir pedido"<< endl;
-            cout<<"2 - Conclusão de pedido"<< endl;
+            cout<<"2 - Conclusao de pedido"<< endl;
            
-            cout<<"Digite o numero da Opção"<<endl;
+            cout<<"Digite o numero da Opcao"<<endl;
             int _option;
             cin >> _option;
             setOption(_option);
             if(!(getOption() == 1 || getOption() == 2)){
-                cout<<"Opção Inválida"<<endl;
+                cout<<"Opcao Invalida"<<endl;
                 system("pause");
                 system("cls");
             }
@@ -82,15 +82,15 @@ void Cheff::showCheff(){
                     optionVerify = true;
                 }
                 else if(getOption() == 2){
-                    cout << "Pedido concluído? Sim = 1 Não = 0 " << endl;
+                    cout << "Pedido concluido? Sim = 1 Nao = 0 " << endl;
                     bool _concluido;
                     cin >> _concluido;
                     setConcluido(_concluido);
                     if(getConcluido() == true){
-                        cout << "Número da mesa:   " << "colocarvariaveldamesa"<< endl;
+                        cout << "Numero da mesa:   " << "colocarvariaveldamesa"<< endl;
                         cout << "Pedido detalhado: " <<  "colocaropedido" << endl;
 
-                        cout << "Ir para o próximo pedido? Sim = 1 Não =0 " << endl;
+                        cout << "Ir para o proximo pedido? Sim = 1 Não =0 " << endl;
                         bool _proximo;
                         cin >> _proximo;
                         setProximo(_proximo);

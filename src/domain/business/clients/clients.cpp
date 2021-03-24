@@ -38,17 +38,17 @@ void Client::showClient(){
     
     while(optionVerify == false){
            
-            cout<<"Selecione uma das opcões abaixo:"<< endl;
+            cout<<"Selecione uma das opcoes abaixo:"<< endl;
             cout<<"1 - Realizar pedido"<< endl;
             cout<<"2 - Status do pedido"<< endl;
             cout<<"3 - Fechar mesa"<< endl;
            
-            cout<<"Digite o numero da Opção"<<endl;
+            cout<<"Digite o numero da Opcao"<<endl;
             int _option;
             cin >> _option;
             setOption(_option);
             if(!(getOption() == 1 || getOption() == 2 || getOption() == 3)){
-                cout<<"Opção Inválida"<<endl;
+                cout<<"Opcao Invalida"<<endl;
                 system("pause");
                 system("cls");
             }
@@ -61,7 +61,7 @@ void Client::showClient(){
                         cout << "Deseja 1 ou 2 sabores?" << endl;
                         cin >> quantidadesabor;
                             if (!(quantidadesabor == 1 || quantidadesabor == 2)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -79,7 +79,7 @@ void Client::showClient(){
                         cout << "Qual o tamanho da pizza: P, M, G?" << endl;
                         cin >> tamanho;
                             if (!(tamanho == "P" || tamanho =="p" || tamanho == "M" || tamanho == "m" || tamanho == "G" || tamanho == "g" )){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -93,11 +93,11 @@ void Client::showClient(){
                         int sabor;
 
                         while(saborVerify == false){
-                        cout << "Digite o Código de um sabor: (1-10)" << endl;
+                        cout << "Digite o Codigo de um sabor: (1-10)" << endl;
                         cin >> sabor;
                             if (!(sabor == 1 || sabor == 2 || sabor == 3 || sabor == 4 || sabor == 5 || 
                                   sabor == 6 || sabor == 7 || sabor == 8 || sabor == 9 || sabor == 10)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -111,14 +111,14 @@ void Client::showClient(){
                         int borda;
 
                         while(bordaVerify == false){
-                        cout << "Digite o Código da borda desejada: "
-                             << "00 sem borda"
-                             << "20 catupiry"
-                             << "30 cheddar"
-                             << "40 chocolate" << endl;
+                        cout << "Digite o Codigo da borda desejada: \n"
+                             << "00 sem borda\n"
+                             << "20 catupiry\n"
+                             << "30 cheddar\n"
+                             << "40 chocolate\n" << endl;
                         cin >> borda;
                             if (!(borda == 00 || borda == 20 || borda == 30 || borda == 40)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invvlida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -131,16 +131,16 @@ void Client::showClient(){
                         int bebida;
 
                         while(bebidaVerify == false){
-                        cout << "Digite o Código da bebida desejada: "
-                             << "50 Agua"
-                             << "51 Agua com gas"
-                             << "52 Refri lata"
-                             << "53 Refri 2litros"
-                             << "54 Suco" 
+                        cout << "Digite o Codigo da bebida desejada: \n"
+                             << "50 Agua\n"
+                             << "51 Agua com gas\n"
+                             << "52 Refri lata\n"
+                             << "53 Refri 2litros\n"
+                             << "54 Suco\n" 
                              << "55 sem bebida" << endl;
                         cin >> bebida;
                             if (!(bebida == 50 || bebida == 51 || bebida == 52 || bebida == 53 || bebida == 54 || bebida == 55)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -151,10 +151,10 @@ void Client::showClient(){
                             
 
                         }
-                        string observacao = "Sem observação";
-                        cout << "Observações? " << endl;
+                        string observacao = "Sem observacao";
+                        cout << "Observacoes? " << endl;
                         cin >> observacao;
-                        cout << "Salvar informação no arquivo pedido";
+                        cout << "Salvar informacao no arquivo pedido";
                     }
 
                     else if (quantidadesabor == 2){
@@ -165,7 +165,7 @@ void Client::showClient(){
                         cout << "Qual o tamanho da pizza: P, M, G?" << endl;
                         cin >> tamanho;
                             if (!(tamanho == "P" || tamanho =="p" || tamanho == "M" || tamanho == "m" || tamanho == "G" || tamanho == "g" )){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -178,11 +178,11 @@ void Client::showClient(){
                         int sabor1, sabor2;
 
                         while(saborVerify == false){
-                        cout << "Digite o Código do primeiro sabor: (1-10)" << endl;
+                        cout << "Digite o Codigo do primeiro sabor: (1-10)" << endl;
                         cin >> sabor1;
                             if (!(sabor1 == 1 || sabor1 == 2 || sabor1 == 3 || sabor1 == 4 || sabor1 == 5 || 
                                   sabor1 == 6 || sabor1 == 7 || sabor1 == 8 || sabor1 == 9 || sabor1 == 10)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -191,11 +191,11 @@ void Client::showClient(){
                             cout << "Salvar sabor no arquivo de pedidos" << endl;
                             saborVerify = true;
                             }
-                        cout << "Digite o Código do segundo sabor: (1-10)" << endl;
+                        cout << "Digite o Codigo do segundo sabor: (1-10)" << endl;
                         cin >> sabor2;
                             if (!(sabor2 == 1 || sabor2 == 2 || sabor2 == 3 || sabor2 == 4 || sabor2 == 5 || 
                                   sabor2 == 6 || sabor2 == 7 || sabor2 == 8 || sabor2 == 9 || sabor2 == 10)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -209,14 +209,14 @@ void Client::showClient(){
                         int borda;
 
                         while(bordaVerify == false){
-                        cout << "Digite o Código da borda desejada: "
-                             << "00 sem borda"
-                             << "20 catupiry"
-                             << "30 cheddar"
+                        cout << "Digite o Codigo da borda desejada: \n"
+                             << "00 sem borda\n"
+                             << "20 catupiry\n"
+                             << "30 cheddar\n"
                              << "40 chocolate" << endl;
                         cin >> borda;
                             if (!(borda == 00 || borda == 20 || borda == 30 || borda == 40)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -229,16 +229,16 @@ void Client::showClient(){
                         bool bebidaVerify = false;
                         int bebida;
                         while(bebidaVerify == false){
-                        cout << "Digite o Código da bebida desejada: "
-                             << "50 Agua"
-                             << "51 Agua com gas"
-                             << "52 Refri lata"
-                             << "53 Refri 2litros"
-                             << "54 Suco" 
+                        cout << "Digite o Codigo da bebida desejada: \n"
+                             << "50 Agua\n"
+                             << "51 Agua com gas\n"
+                             << "52 Refri lata\n"
+                             << "53 Refri 2litros\n"
+                             << "54 Suco\n" 
                              << "55 sem bebida" << endl;
                         cin >> bebida;
                             if (!(bebida == 50 || bebida == 51 || bebida == 52 || bebida == 53 || bebida == 54 || bebida == 55)){
-                             cout << "Opção inválida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -249,10 +249,10 @@ void Client::showClient(){
                             
 
                         }
-                        string observacao = "Sem observação";
-                        cout << "Observações? " << endl;
+                        string observacao = "Sem observacao";
+                        cout << "Observacoes? " << endl;
                         cin >> observacao;
-                        cout << "Salvar informação no arquivo pedido";
+                        cout << "Salvar informacao no arquivo pedido";
                     }
                     
                     cout << "" << endl;
@@ -260,6 +260,41 @@ void Client::showClient(){
                 }
                 else if(getOption() == 2){
                     cout << " Status do pedido " << endl;
+                    cout << "buscarstatusdopedido dentrodoarquivodocheff" << endl;
+                    cout << "criar3ifs,umpracadaestado" << endl;
+
+                }
+                 else if(getOption() == 3){
+                     int encerramesa;
+                     bool mesaVerify = false;
+
+                    while(mesaVerify == false){
+                         cout << " Fechar mesa" << endl;
+                         cout << "Deseja fechar mesa? 1 - SIM ou 0 - NAO" << endl;
+                        cin >> encerramesa;
+                            if (!(encerramesa == 1 || encerramesa == 0) ){
+                             cout << "Opcao invalida" << endl;
+                             system ("pause");
+                             system ("cls");
+                            }
+                            else {
+                                if(encerramesa == 1){
+                                    cout << "Salvar mesa encerrada no arquivo de pedidos" << endl;
+                                    cout << "Compareca ao caixa" << endl;
+                                    mesaVerify = true;
+                                }
+                                else if (encerramesa == 0){
+                                    cout << "Naofecharmesa" << endl;
+                                    cout << "Seu pedido continua aberto!" << endl;
+                                    mesaVerify = true;
+                                }
+                            }
+                        }
+                
+                   
+                    
+                
+
                 }
             }
     
