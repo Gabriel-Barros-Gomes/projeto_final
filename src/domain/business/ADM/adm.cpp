@@ -32,7 +32,7 @@ Adm::~Adm(){
 void Adm::showAdm(){
 bool optionVerify = false;
     cout << "adm" << endl;
-    string user;
+    int user;
     int senha;
     int cadastro;
         while(optionVerify == false){
@@ -53,7 +53,6 @@ bool optionVerify = false;
             }
             else{
                 if(getOption() == 1){
-
                     cout << "Digite o usuario (1 - gerente 0 - cheff)" << endl;
                     cin >> user;
                     if(!(user == 1 || user == 0)){
@@ -66,16 +65,19 @@ bool optionVerify = false;
 
                     if (user == 1){
                         cout << "irprateladogerente" << endl;
+                        system("pause");
                     }
                     else if (user == 0){
                         cout << "irparateladocheff" << endl;
+                        system("pause");
                     }
                     
                     optionVerify = true;
                 }
                 else if(getOption() == 2){
                     cout << "Cadastrar usuario " << endl;
-                    cout << "Digite 1 se quiser cadastrar gerente\n Digite 0 se quiser cadastrar cheff" << endl;
+                    cout << "Digite 1 se quiser cadastrar gerente"<<endl;
+                    cout<<"Digite 0 se quiser cadastrar cheff" << endl;
                     cin >> cadastro;
 
                     if(!(cadastro == 1 || cadastro == 0)){
@@ -87,9 +89,11 @@ bool optionVerify = false;
 
                     if (cadastro == 1){
                         cout << "Crie a senha do gerente (apenas numeros)" << endl;
+                        system("pause");
                     }
                     else if (cadastro == 0){
                         cout << "Crie a senha do cheff (apenas numeros)" << endl;
+                        system("pause");
                     }
                     
                     optionVerify = true;

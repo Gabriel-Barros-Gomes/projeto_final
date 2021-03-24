@@ -47,6 +47,7 @@ public:
             }else{
                 if(getOption() == 1){
                     system("cd bin");
+                    system("adm.exe");
                     system("mananger.exe");
                 }
                 else if(getOption() == 2){
@@ -55,6 +56,7 @@ public:
                 }
                 else if(getOption() == 3){
                     system("cd bin");
+                    system("adm.exe");
                     system("cheff.exe");
                 }
                 system("cls");
