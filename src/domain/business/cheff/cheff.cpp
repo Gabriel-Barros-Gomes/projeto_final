@@ -1,4 +1,5 @@
 #include<iostream>
+#include"file_interface.h"
 
 using namespace std;
 
@@ -55,6 +56,7 @@ Cheff::~Cheff(){
 }
 
 void Cheff::showCheff(){
+    File file;
     bool optionVerify = false;
     cout << "cheff" << endl;
     cout << "Faca apenas um pedido por vez!" << endl;
@@ -79,6 +81,7 @@ void Cheff::showCheff(){
 
                     cout << "Colocar pedidos em andamento por ordem de chegada" << endl;
                     cout << "Pedido em andamento" << endl;
+                    system("pause");
                     optionVerify = true;
                 }
                 else if(getOption() == 2){

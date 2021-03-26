@@ -1,4 +1,5 @@
 #include<iostream>
+#include"file_interface.h"
 
 using namespace std;
 
@@ -33,6 +34,11 @@ int Client::getOption(){
 }
 
 void Client::showClient(){
+    File file;
+    string nomedoarquivo = "pedido.txt";
+    string header = "Realização de pedido";
+    file.saveToFile(nomedoarquivo, header);
+    
     cout << "inserirarquivocardapio" << endl;
     bool optionVerify = false;
     
@@ -66,7 +72,7 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Salvar quantidadesabor" << endl;
+                                file.saveToFile(nomedoarquivo,("quantidade: " + quantidadesabor));
                             quantidadeVerify = true;
                             }
                     }
