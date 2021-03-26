@@ -1,4 +1,5 @@
 #include<iostream>
+#include"file_interface.h"
 
 using namespace std;
 
@@ -21,7 +22,11 @@ Mananger::~Mananger(){
 
 }
 void Mananger::showMananger(){
+File file;
+
     cout << "gerente" << endl;
+
+    file.saveToFile("nada","teste");
     system("pause");
 }
 
