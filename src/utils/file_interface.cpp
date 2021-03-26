@@ -1,11 +1,11 @@
 #include "file_interface.h"
 
 bool File::saveToFile(string _fileName, string _text){
-  ofstream file;
-  if(file.is_open()){
+  fstream file;
+  if(!file.is_open()){
       file.close();
   }
-  file.open(_fileName);
+  file.open(_fileName, fstream::out);
   file << _text << "\n";
   file.close();
 }
