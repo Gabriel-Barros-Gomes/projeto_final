@@ -33,5 +33,18 @@ pronto.
 ```
 ### Uso
 ```
-Aplicação em desenvolvimento
+Requisitos:
+
+git para windows -> https://git-scm.com/
+MinGw -> gcc e g++ compilers https://sourceforge.net/projects/mingw/
+
+Instalação:
+  -> Abrir cmd
+  -> mkdir application [enter]
+  -> cd application [enter]
+  -> git clone https://github.com/Gabriel-Barros-Gomes/projeto_final [enter]
+  -> Execute o seguinte arquivo "../application/projeto_final/src/bin/main.exe"
+ 
+Instruções de Uso: 
+  
 ```
