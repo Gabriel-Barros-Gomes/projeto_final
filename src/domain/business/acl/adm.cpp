@@ -1,4 +1,5 @@
 #include<iostream>
+#include"file_interface.h"
 
 using namespace std;
 
@@ -30,6 +31,11 @@ Adm::~Adm(){
 
 }
 void Adm::showAdm(){
+File file;
+string header = "Usuarios\n";
+string footer = "\n###configurations###\n\nativo=true\n";
+string body = header;
+
 bool optionVerify = false;
     cout << "adm" << endl;
     int user;
@@ -53,31 +59,30 @@ bool optionVerify = false;
             }
             else{
                 if(getOption() == 1){
-                    cout << "Digite o usuario (1 - gerente 0 - cheff)" << endl;
+                    cout << "Digite o usuario (0 - gerente 1 - cheff)" << endl;
                     cin >> user;
                     if(!(user == 1 || user == 0)){
                     cout<<"Opcao Invalida"<<endl;
                     system("pause");
                     system("cls");
                     }
-                    cout << "Digite sua senha (use apenas numeros)" << endl;
-                    cin >> senha;
-
-                    if (user == 1){
-                        cout << "irprateladogerente" << endl;
-                        system("pause");
+                    string usuario;
+                    if(user == 0){
+                        usuario = "gerente\n";
+                    }else{
+                        usuario = "cheff\n";
                     }
-                    else if (user == 0){
-                        cout << "irparateladocheff" << endl;
-                        system("pause");
-                    }
-                    
+                    cout << "Digite sua senha" << endl;
+                    cin.ignore();
+                    string senha;
+                    getline(cin, senha);
+                    cout << "consultar existencia do usuario" << endl;
                     optionVerify = true;
                 }
                 else if(getOption() == 2){
                     cout << "Cadastrar usuario " << endl;
-                    cout << "Digite 1 se quiser cadastrar gerente"<<endl;
-                    cout<<"Digite 0 se quiser cadastrar cheff" << endl;
+                    cout << "Digite 0 para cadastrar gerente"<<endl;
+                    cout << "Digite 1 para cadastrar cheff" << endl;
                     cin >> cadastro;
 
                     if(!(cadastro == 1 || cadastro == 0)){
@@ -85,17 +90,25 @@ bool optionVerify = false;
                     system("pause");
                     system("cls");
                     }
-                
-
-                    if (cadastro == 1){
-                        cout << "Crie a senha do gerente (apenas numeros)" << endl;
-                        system("pause");
+                    string usuario;
+                    string senha;
+                    if (cadastro == 0){
+                        usuario = "\ngerente\n";
+                        cout << "Digite uma senha (Gerente) " <<endl;
+                        cin.ignore();
+                        getline(cin,senha);
                     }
-                    else if (cadastro == 0){
-                        cout << "Crie a senha do cheff (apenas numeros)" << endl;
-                        system("pause");
+                    else{
+                        usuario = "\ncheff\n";
+                        cout << "Digite uma senha (Gerente) " <<endl;
+                        cin.ignore();
+                        getline(cin,senha);
                     }
+                    body = body + usuario + senha;
+                    body = body + footer;
                     
+                    file.saveToFile("users",body);
+
                     optionVerify = true;
                         }
                         
