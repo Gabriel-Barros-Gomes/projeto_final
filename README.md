@@ -34,7 +34,6 @@ pronto.
 ### Uso
 ```
 Requisitos:
-
 git para windows -> https://git-scm.com/
 MinGw -> gcc e g++ compilers https://sourceforge.net/projects/mingw/
 
