@@ -1,0 +1,16 @@
+Realização de pedido
+Mesa=
+Pizza 2 Sabor(es)
+
+Tamanho p
+Sabor 1 [sabor entra aqui}
+Sabor 2 [sabor entra aqui}
+Borda [borda entra aqui]
+Bebida [bebida entra aqui]
+sem obs
+##configurations##
+ativo=true
+id=pedidos
+
+[configuraçoes especiais entram aqui]
+

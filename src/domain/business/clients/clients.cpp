@@ -36,8 +36,11 @@ int Client::getOption(){
 void Client::showClient(){
     File file;
     string nomedoarquivo = "pedido.txt";
-    string header = "Realização de pedido";
-    file.saveToFile(nomedoarquivo, header);
+    string header = "Realização de pedido\nMesa=";
+    string footer = "\n##configurations##\nativo=true\nid=pedidos\n";
+    string body = header;
+
+
     
     cout << "inserirarquivocardapio" << endl;
     bool optionVerify = false;
@@ -61,22 +64,31 @@ void Client::showClient(){
             else{
                 if(getOption() == 1){
                     bool quantidadeVerify = false;
-                    int quantidadesabor;
+                    int quantidadeSabor;
 
                     while(quantidadeVerify == false){
                         cout << "Deseja 1 ou 2 sabores?" << endl;
-                        cin >> quantidadesabor;
-                            if (!(quantidadesabor == 1 || quantidadesabor == 2)){
+                        cin >> quantidadeSabor;
+                            if (!(quantidadeSabor == 1 || quantidadeSabor == 2)){
                              cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
                             else {
-                                file.saveToFile(nomedoarquivo,("quantidade: " + quantidadesabor));
+                                string strQuantidadeSabor;
+                                if(quantidadeSabor == 1){
+                                    strQuantidadeSabor = "1";
+
+                                }else{
+                                    strQuantidadeSabor = "2";
+                                }
+
+                                string _quantidadeSabor = "\nPizza "+ strQuantidadeSabor + " Sabor(es)\n";
+                                body = body + _quantidadeSabor;
                             quantidadeVerify = true;
                             }
                     }
-                    if (quantidadesabor == 1){
+                    if (quantidadeSabor == 1){
 
                         bool tamanhoVerify = false;
                         string tamanho;
@@ -90,7 +102,8 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Salvar tamanho" << endl;
+                            string _tamanho = "\nTamanho " + tamanho + "\n" ;
+                            body = body + _tamanho;
                             tamanhoVerify = true;
                             }
                         }
@@ -109,7 +122,8 @@ void Client::showClient(){
                             }
                             else {
                             cout << "Pesquisar sabor" << endl;
-                            cout << "Salvar sabor no arquivo de pedidos" << endl;
+                            string _sabor = "Sabor [sabor entra aqui}\n";
+                            body = body + _sabor;
                             saborVerify = true;
                             }
                         }
@@ -129,8 +143,11 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Salvar borda no arquivo de pedidos" << endl;
-                            bordaVerify = true;
+                                cout<<"pesquisar borda no arquivo cardapio"<<endl;
+                                string _borda = "Borda [borda entra aqui]";  
+                                body = body + _borda;  
+                                bordaVerify = true;
+
                             }
                         }
                         bool bebidaVerify = false;
@@ -144,26 +161,35 @@ void Client::showClient(){
                              << "53 Refri 2litros\n"
                              << "54 Suco\n" 
                              << "55 sem bebida" << endl;
-                        cin >> bebida;
+                            cin >> bebida;
                             if (!(bebida == 50 || bebida == 51 || bebida == 52 || bebida == 53 || bebida == 54 || bebida == 55)){
                              cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
                             else {
-                            cout << "Salvar bebida no arquivo de pedidos" << endl;
+                            cout<<"pesquisar bebida no arquivo cardapio"<<endl;
+                            string _bebida = "\nBebida [bebida entra aqui]\n"; 
+                            body = body + _bebida;
                             bebidaVerify = true;
                             }
                             
 
                         }
-                        string observacao = "Sem observacao";
+                        string observacao;
                         cout << "Observacoes? " << endl;
-                        cin >> observacao;
-                        cout << "Salvar informacao no arquivo pedido";
+                        cin.ignore();
+                        getline(cin,observacao);
+                        string _observacao = observacao;
+                        body = body + _observacao;
+                        footer = footer + "\n[configuraçoes especiais entram aqui]\n";
+                        body = body + footer;
+
+                        file.saveToFile("pedidos_pizza_sabor1", body );
                     }
 
-                    else if (quantidadesabor == 2){
+
+                    else if (quantidadeSabor == 2){
                         bool tamanhoVerify = false;
                         string tamanho;
 
@@ -176,7 +202,8 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Salvar tamanho" << endl;
+                            string _tamanho = "\nTamanho " + tamanho + "\n" ;
+                            body = body + _tamanho;
                             tamanhoVerify = true;
                             }
                         }
@@ -194,7 +221,8 @@ void Client::showClient(){
                             }
                             else {
                             cout << "Pesquisar sabor" << endl;
-                            cout << "Salvar sabor no arquivo de pedidos" << endl;
+                            string _sabor1 = "Sabor 1 [sabor entra aqui}\n";
+                            body = body + _sabor1;
                             saborVerify = true;
                             }
                         cout << "Digite o Codigo do segundo sabor: (1-10)" << endl;
@@ -207,7 +235,8 @@ void Client::showClient(){
                             }
                             else {
                             cout << "Pesquisar sabor" << endl;
-                            cout << "Salvar sabor no arquivo de pedidos" << endl;
+                            string _sabor2 = "Sabor 2 [sabor entra aqui}\n";
+                            body = body + _sabor2;
                             saborVerify = true;
                             }
                         }
@@ -227,7 +256,8 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Salvar borda no arquivo de pedidos" << endl;
+                            string _borda = "Borda [borda entra aqui]";  
+                            body = body + _borda; 
                             bordaVerify = true;
                             }
                         }
@@ -249,7 +279,9 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Salvar bebida no arquivo de pedidos" << endl;
+                            cout<<"pesquisar bebida no arquivo cardapio"<<endl;
+                            string _bebida = "\nBebida [bebida entra aqui]\n"; 
+                            body = body + _bebida;
                             bebidaVerify = true;
                             }
                             
@@ -257,8 +289,14 @@ void Client::showClient(){
                         }
                         string observacao = "Sem observacao";
                         cout << "Observacoes? " << endl;
-                        cin >> observacao;
-                        cout << "Salvar informacao no arquivo pedido";
+                        cin.ignore();
+                        getline(cin,observacao);
+                        string _observacao = observacao;
+                        body = body + _observacao;
+                        footer = footer + "\n[configuraçoes especiais entram aqui]\n";
+                        body = body + footer;
+
+                        file.saveToFile("pedidos_pizza_sabor2", body );
                     }
                     
                     cout << "" << endl;
