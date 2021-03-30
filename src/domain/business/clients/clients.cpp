@@ -42,7 +42,7 @@ void Client::showClient(){
 
 
     
-    cout << "inserirarquivocardapio" << endl;
+    file.showFile("cardapio.txt");
     bool optionVerify = false;
     
     while(optionVerify == false){
@@ -177,6 +177,12 @@ void Client::showClient(){
 
                         }
                         string observacao;
+                        string nmesa;
+                        string mesa = "mesa=";
+                        cout << "Digite o numero da sua mesa (colado na mesa)" << endl;
+                        cin >> nmesa;
+                        mesa = mesa + nmesa + "\n";
+                        body = body + mesa;
                         cout << "Observacoes? " << endl;
                         cin.ignore();
                         getline(cin,observacao);
@@ -287,7 +293,13 @@ void Client::showClient(){
                             
 
                         }
-                        string observacao = "Sem observacao";
+                        string observacao;
+                        string nmesa;
+                        string mesa = "mesa=";
+                        cout << "Digite o numero da sua mesa (colado na mesa)" << endl;
+                        cin >> nmesa;
+                        mesa = mesa + nmesa + "\n";
+                        body = body + mesa;
                         cout << "Observacoes? " << endl;
                         cin.ignore();
                         getline(cin,observacao);
