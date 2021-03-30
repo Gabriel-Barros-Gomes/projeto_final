@@ -47,8 +47,3 @@ Instalação:
 Instruções de Uso: 
 
 ```
-#### CLIENTE
-
-`` `
-instrução do cliente
-```
