@@ -55,22 +55,22 @@ File file;
 
                 }
                 else if(getOption() == 2){
-                    
-                        }
-                else if (getOption() == 3){
+                    string pesqmesa;
 
+                    cout << "Entre com o numero da mesa que deseja procurar" << endl;
+                    cin >> pesqmesa;
+                    
+               }
+                else if (getOption() == 3){
+                    cout << "temquefazerofaturamento" << endl;
                 }
                 }
                 }
                  system("cls");
 
-    system("pause");
+    system("pause");         
+}
 
-             }           
-}
-}
-    system("pause");
-}
 
 int main(){
 

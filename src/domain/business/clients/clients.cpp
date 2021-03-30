@@ -262,7 +262,7 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            string _borda = "Borda [borda entra aqui]";  
+                            string _borda = "Borda \n" ;  
                             body = body + _borda; 
                             bordaVerify = true;
                             }
@@ -286,7 +286,7 @@ void Client::showClient(){
                             }
                             else {
                             cout<<"pesquisar bebida no arquivo cardapio"<<endl;
-                            string _bebida = "\nBebida [bebida entra aqui]\n"; 
+                            string _bebida = "Bebida \n"; 
                             body = body + _bebida;
                             bebidaVerify = true;
                             }
