@@ -20,6 +20,8 @@ bool deleteFile(string _file);
 
 string readFile(string _fileName);
 
+string showFile(string _fileName);
+
 
 };
 
