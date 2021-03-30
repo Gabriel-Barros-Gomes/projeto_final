@@ -45,5 +45,5 @@ Instalação:
   -> Execute o seguinte arquivo "../application/projeto_final/src/bin/main.exe"
  
 Instruções de Uso: 
-  
+
 ```
