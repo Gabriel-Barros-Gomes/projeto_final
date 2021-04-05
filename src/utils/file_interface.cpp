@@ -37,6 +37,7 @@ string File::readFile(string _fileName){
 
 string File::showFile(string _fileName){
   ifstream file;
+
   string linha;
     if(!file.is_open()){
       file.close();
