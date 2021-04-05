@@ -1,7 +1,6 @@
 ######## CARDAPIO ########:
 
-Pizzas: 
-		         PEQUENA  MEDIA  GRANDE
+Pizzas: 	         PEQUENA  MEDIA  GRANDE
 1  Mussarela 		   14      24      29
 2  Calabresa		   15      25      30
 3  Bacon 		   16      26      31
@@ -13,17 +12,12 @@ Pizzas:
 9  Chocolate com morango   18      28      33
 10 Romeu e Julieta         18      28      33
 
-Tamanho:
-P Pequena
-M Media
-G Grande 
 
-
-Borda: 
-00 Sem borda    -
-20 Catupiry     5
-30 Cheddar      6
-40 Chocolate    7
+Tamanho:	  #	   Borda: 
+P Pequena	  #	  00 Sem borda    -
+M Media		  #	  20 Catupiry     5
+G Grande 	  #	  30 Cheddar      6
+		  #	  40 Chocolate    7
 
 Bebida:
 50 Agua 500ml     3
@@ -33,8 +27,4 @@ Bebida:
 54 Suco 500ml     8
 55 Sem bebida     0
 
-
 ###########################
-
-
-
