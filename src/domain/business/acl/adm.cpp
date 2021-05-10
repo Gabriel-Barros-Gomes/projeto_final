@@ -1,4 +1,5 @@
 #include<iostream>
+#include<queue>
 #include"file_interface.h"
 
 using namespace std;
@@ -32,9 +33,7 @@ Adm::~Adm(){
 }
 void Adm::showAdm(){
 File file;
-string header = "Usuarios\n";
-string footer = "\n###configurations###\n\nativo=true\n";
-string body = header;
+string body;
 
 bool optionVerify = false;
     cout << "adm" << endl;
@@ -59,6 +58,8 @@ bool optionVerify = false;
             }
             else{
                 if(getOption() == 1){
+                    File file;
+
                     cout << "Digite o usuario (0 - gerente 1 - cheff)" << endl;
                     cin >> user;
                     if(!(user == 1 || user == 0)){
@@ -68,18 +69,24 @@ bool optionVerify = false;
                     }
                     string usuario;
                     if(user == 0){
-                        usuario = "gerente\n";
+                        usuario = "gerente";
                     }else{
-                        usuario = "cheff\n";
+                        usuario = "cheff";
                     }
                     cout << "Digite sua senha" << endl;
                     cin.ignore();
                     string senha;
                     getline(cin, senha);
-                    cout << "consultar existencia do usuario" << endl;
+                    queue<string> Queue = file.readFile("users");
+                        while(!Queue.empty()){
+                            cout << Queue.back() << endl;
+                        }
+                        system("pause");
                     optionVerify = true;
                 }
                 else if(getOption() == 2){
+                    File file;
+
                     cout << "Cadastrar usuario " << endl;
                     cout << "Digite 0 para cadastrar gerente"<<endl;
                     cout << "Digite 1 para cadastrar cheff" << endl;
@@ -93,19 +100,18 @@ bool optionVerify = false;
                     string usuario;
                     string senha;
                     if (cadastro == 0){
-                        usuario = "\ngerente\n";
+                        usuario = "gerente";
                         cout << "Digite uma senha (Gerente) " <<endl;
                         cin.ignore();
                         getline(cin,senha);
                     }
                     else{
                         usuario = "\ncheff\n";
-                        cout << "Digite uma senha (Gerente) " <<endl;
+                        cout << "Digite uma senha (Cheff) " <<endl;
                         cin.ignore();
                         getline(cin,senha);
                     }
-                    body = body + usuario + senha;
-                    body = body + footer;
+                    body = usuario + " " + senha;
                     
                     file.saveToFile("users",body);
 

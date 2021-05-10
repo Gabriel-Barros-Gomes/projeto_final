@@ -1,5 +1,6 @@
 #include "file_interface.h"
 
+
 bool File::saveToFile(string _fileName, string _text){
   fstream file;
   if(!file.is_open()){
@@ -18,16 +19,16 @@ bool File::deleteFile(string _fileName){
 
 }
 
-string File::readFile(string _fileName){
+queue<string> File::readFile(string _fileName){
   ifstream file;
+  std::queue<string> Queue;
+  
   string linha;
-    if(!file.is_open()){
-      file.close();
-  }
     file.open(_fileName);
     if (file.is_open()){
       while(getline(file, linha )){
-        cout << linha << endl;
+        Queue.push(linha);
+        return Queue;
       }
     }
     else{
