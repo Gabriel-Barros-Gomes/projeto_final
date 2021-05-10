@@ -3,7 +3,8 @@
 
 #include<iostream>
 #include<fstream>
-#include<stack>
+#include<queue>
+
 
 
 using namespace std;
@@ -20,7 +21,7 @@ bool updateToFile(string _fileName, string _text);
 
 bool deleteFile(string _file);
 
-string readFile(string _fileName);
+queue<string> readFile(string _fileName);
 
 string showFile(string _fileName);
 
