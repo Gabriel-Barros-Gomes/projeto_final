@@ -53,18 +53,20 @@ Na tela inicial escolha o seu tipo de usuário, digitando:
 
 GERENTE
 Primeira coisa a fazer é entrar com seu login e senha cadastrados pelo ADM.
-Após isso, você poderá escolher a opção da ação que deseja realizar, no seu menu há as seguintes opções:
+Após isso, você poderá escolher a opção da ação que deseja realizar, 
+no seu menu há as seguintes opções:
 
 1 ALTERAÇÃO DE CARDAPIO
-	-> Nesta opção você poderá fazer mudanças no cardápio do seu restaurante, modificando preços, 
-	inserindo e removendo itens.
+	-> Nesta opção você poderá fazer mudanças no cardápio do seu restaurante, 
+	modificando preços, inserindo e removendo itens.
 
 2 CAIXA 
-	-> Esta será uma opção bastante utilizada, você indicará o número da mesa que deseja visualizar
+	-> Esta será uma opção bastante utilizada, 
+	você indicará o número da mesa que deseja visualizar
 	e o programa listará os pedidos desta mesa e o valor da conta.
 	
-	-> Você deve escrever a forma de pagamento do cliente, para uma questão de melhor organização
-	do restaurante no momento do FATURAMENTO.
+	-> Você deve escrever a forma de pagamento do cliente, 
+	para uma questão de melhor organização do restaurante no momento do FATURAMENTO.
 	
 	-> Esta opção é apenas para informar dados ao programa.
 
@@ -76,26 +78,29 @@ Após isso, você poderá escolher a opção da ação que deseja realizar, no s
 
 CHEFF
 Primeira coisa a fazer é entrar com seu login e senha cadastrados pelo ADM.
-Após isso, você poderá escolher a opção da ação que deseja realizar, no seu menu há as seguintes opções:
+Após isso, você poderá escolher a opção da ação que deseja realizar,
+no seu menu há as seguintes opções:
 
 1 ABRIR PEDIDO
-	-> Nesta opção você terá acesso a uma fila de pedidos que há para fazer, após a realização de determinado
-	pedido você deve ir para opção 2 que informa ao programa que aquele pedido está concluído.
+	-> Nesta opção você terá acesso a uma fila de pedidos que há para fazer, 
+	após a realização de determinado pedido você deve ir para opção 2 que 
+	informa ao programa que aquele pedido está concluído.
 	
 2 PEDIDO CONCLUIDO
-	-> Esta opção é utilizada para informar ao programa que determinado pedido está pronto, nela você também 
-	indica se deseja ir para o próximo pedido.
+	-> Esta opção é utilizada para informar ao programa que determinado pedido
+	está pronto, nela você também indica se deseja ir para o próximo pedido.
 
 CLIENTE
 Seja muito bem-vindo ao nosso restaurante!
 Qualquer dúvida contate um de nossos funcionários. 
-A sua tela inicial já lhe apresenta o cardápio. Antes de cada item há um número de identificação,
+A sua tela inicial já lhe apresenta o cardápio.
+Antes de cada item há um número de identificação,
 logo depois vem sua descrição e valor.
 No seu menu há as seguintes opções:
 
 1 REALIZAR PEDIDO
-	-> Esta opção é a mais importante! Através dela você fará seu pedido e dará todas as informações
-	necessárias para o Cheff que o prepara.
+	-> Esta opção é a mais importante! Através dela você fará seu pedido 
+	e dará todas as informações necessárias para o Cheff que o prepara.
 	
 	-> Siga as instruções de cada pergunta e vá montando seu pedido.
 	
