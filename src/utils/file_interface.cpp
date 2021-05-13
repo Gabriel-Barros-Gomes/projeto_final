@@ -28,8 +28,8 @@ queue<string> File::readFile(string _fileName){
     if (file.is_open()){
       while(getline(file, linha )){
         Queue.push(linha);
-        return Queue;
       }
+      return Queue;
     }
     else{
       cout << "Nao e possivel ler o arquivo" << endl;
