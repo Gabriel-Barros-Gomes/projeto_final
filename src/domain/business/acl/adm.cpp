@@ -69,9 +69,9 @@ bool optionVerify = false;
                     }
                     string usuario;
                     if(user == 0){
-                        usuario = "gerente";
+                        usuario = "gerente\n";
                     }else{
-                        usuario = "cheff";
+                        usuario = "cheff\n";
                     }
                     cout << "Digite sua senha" << endl;
                     cin.ignore();
@@ -79,7 +79,8 @@ bool optionVerify = false;
                     getline(cin, senha);
                     queue<string> Queue = file.readFile("users");
                         while(!Queue.empty()){
-                            cout << Queue.back() << endl;
+                            cout << Queue.front() << endl;
+                            Queue.pop();
                         }
                         system("pause");
                     optionVerify = true;
@@ -100,13 +101,13 @@ bool optionVerify = false;
                     string usuario;
                     string senha;
                     if (cadastro == 0){
-                        usuario = "gerente";
+                        usuario = "gerente\n";
                         cout << "Digite uma senha (Gerente) " <<endl;
                         cin.ignore();
                         getline(cin,senha);
                     }
                     else{
-                        usuario = "\ncheff\n";
+                        usuario = "cheff\n";
                         cout << "Digite uma senha (Cheff) " <<endl;
                         cin.ignore();
                         getline(cin,senha);
