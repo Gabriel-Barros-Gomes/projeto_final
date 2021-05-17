@@ -90,7 +90,7 @@ void Client::showClient(){
                             }
                     }
                     if (quantidadeSabor == 1){
-
+                        file.saveToFile("qsabor", "1");
                         bool tamanhoVerify = false;
                         string tamanho;
 
@@ -374,6 +374,7 @@ void Client::showClient(){
 
 
                     else if (quantidadeSabor == 2){
+                        file.saveToFile("qsabor", "2");
                         bool tamanhoVerify = false;
                         string tamanho;
 
