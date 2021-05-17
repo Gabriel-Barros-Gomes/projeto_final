@@ -1,16 +1,38 @@
 Realização de pedido
-Mesa=
 Pizza 1 Sabor(es)
 
 Tamanho p
-Sabor [sabor entra aqui}
-Borda [borda entra aqui]
-Bebida [bebida entra aqui]
-mesa=15
-n
-##configurations##
-ativo=true
-id=pedidos
-
-[configuraçoes especiais entram aqui]
-
+Sabor: Romeu-e-Julieta
+Borda: Sem Borda
+Borda: Sem Borda
+Catupiry
+Borda: Sem Borda
+Catupiry
+Cheddar
+Borda: Sem Borda
+Catupiry
+Cheddar
+Chocolate
+Bebida: Agua
+Bebida: Agua
+Agua com gas
+Bebida: Agua
+Agua com gas
+Refri lata
+Bebida: Agua
+Agua com gas
+Refri lata
+Refri 2litros
+Bebida: Agua
+Agua com gas
+Refri lata
+Refri 2litros
+Suco
+Bebida: Agua
+Agua com gas
+Refri lata
+Refri 2litros
+Suco
+Sem Bebida
+Mesa: 5
+nao

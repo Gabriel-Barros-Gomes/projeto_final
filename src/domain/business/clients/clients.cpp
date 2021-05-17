@@ -36,9 +36,9 @@ int Client::getOption(){
 
 void Client::showClient(){
     File file;
+    queue<string> Queue;
     string nomedoarquivo = "pedido.txt";
-    string header = "Realização de pedido\nMesa=";
-    string footer = "\n##configurations##\nativo=true\nid=pedidos\n";
+    string header = "Realização de pedido";
     string body = header;
 
 
@@ -122,9 +122,150 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Pesquisar sabor" << endl;
-                            string _sabor = "Sabor [sabor entra aqui}\n";
-                            body = body + _sabor;
+                                Queue = file.readFile("sabores");
+
+                                switch (sabor)
+                                {
+                                case 1:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Mussarela"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                case 2:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Calabresa"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                case 3:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Bacon"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 4:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Frango-com-catupiry"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 5:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Marguerita"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 6:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Quatro-queijos"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                   
+                                case 7:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Portuguesa"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 8:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Chocolate-com-banana"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 9:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Chocolate-com-morango"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 10:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Romeu-e-Julieta"){
+                                            body = body + "Sabor: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                }
+                                
                             saborVerify = true;
                             }
                         }
@@ -144,9 +285,26 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                                cout<<"pesquisar borda no arquivo cardapio"<<endl;
-                                string _borda = "Borda [borda entra aqui]";  
-                                body = body + _borda;  
+                                string _borda = "Borda: ";  
+                                switch (borda)
+                                {
+                                case 00:
+                                    _borda = _borda + "Sem Borda\n";
+                                    body = body + _borda;
+
+                                case 20:
+                                    _borda = _borda + "Catupiry\n";
+                                    body = body + _borda;
+
+                                case 30:
+                                    _borda = _borda + "Cheddar\n";
+                                    body = body + _borda;
+
+                                case 40:
+                                    _borda = _borda + "Chocolate\n";
+                                    body = body + _borda;
+                                
+                                }
                                 bordaVerify = true;
 
                             }
@@ -169,9 +327,28 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout<<"pesquisar bebida no arquivo cardapio"<<endl;
-                            string _bebida = "\nBebida [bebida entra aqui]\n"; 
-                            body = body + _bebida;
+                                string _bebida = "Bebida: ";
+                                switch (bebida)
+                                {
+                                case 50: 
+                                    _bebida = _bebida + "Agua\n";
+                                    body = body + _bebida;
+                                case 51:
+                                    _bebida = _bebida + "Agua com gas\n";
+                                    body = body + _bebida;
+                                case 52:
+                                    _bebida = _bebida + "Refri lata\n";
+                                    body = body + _bebida;
+                                case 53:
+                                    _bebida = _bebida + "Refri 2litros\n";
+                                    body = body + _bebida;
+                                case 54:
+                                    _bebida = _bebida + "Suco\n";
+                                    body = body + _bebida;
+                                case 55:
+                                    _bebida = _bebida + "Sem Bebida\n";
+                                    body = body + _bebida;
+                                }
                             bebidaVerify = true;
                             }
                             
@@ -179,7 +356,7 @@ void Client::showClient(){
                         }
                         string observacao;
                         string nmesa;
-                        string mesa = "mesa=";
+                        string mesa = "Mesa: ";
                         cout << "Digite o numero da sua mesa (colado na mesa)" << endl;
                         cin >> nmesa;
                         mesa = mesa + nmesa + "\n";
@@ -189,10 +366,10 @@ void Client::showClient(){
                         getline(cin,observacao);
                         string _observacao = observacao;
                         body = body + _observacao;
-                        footer = footer + "\n[configuraçoes especiais entram aqui]\n";
-                        body = body + footer;
 
                         file.saveToFile("pedidos_pizza_sabor1", body );
+                        file.saveToFile("ativo", "sim");
+                        cout << "\nPedido Feito com Sucesso\n" <<endl;
                     }
 
 
@@ -227,9 +404,150 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Pesquisar sabor" << endl;
-                            string _sabor1 = "Sabor 1 [sabor entra aqui}\n";
-                            body = body + _sabor1;
+                             Queue = file.readFile("sabores");
+
+                                switch (sabor1)
+                                {
+                                case 1:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Mussarela"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                case 2:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Calabresa"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                case 3:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Bacon"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 4:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Frango-com-catupiry"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 5:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Marguerita"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 6:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Quatro-queijos"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                   
+                                case 7:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Portuguesa"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 8:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Chocolate-com-banana"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 9:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Chocolate-com-morango"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 10:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Romeu-e-Julieta"){
+                                            body = body + "Sabor 1: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                }
+                                
                             saborVerify = true;
                             }
                         cout << "Digite o Codigo do segundo sabor: (1-10)" << endl;
@@ -241,9 +559,150 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout << "Pesquisar sabor" << endl;
-                            string _sabor2 = "Sabor 2 [sabor entra aqui}\n";
-                            body = body + _sabor2;
+                             Queue = file.readFile("sabores");
+
+                                switch (sabor2)
+                                {
+                                case 1:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Mussarela"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                case 2:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Calabresa"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                case 3:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Bacon"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 4:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Frango-com-catupiry"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 5:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Marguerita"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 6:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Quatro-queijos"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                   
+                                case 7:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Portuguesa"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 8:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Chocolate-com-banana"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 9:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Chocolate-com-morango"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                case 10:
+                                    while(!Queue.empty()){
+                                        string flavorToParse = Queue.front();
+                                        string delimiter = "#";
+                                        string _sabor = flavorToParse.substr(0, flavorToParse.find(delimiter));
+                                        if(_sabor == "Romeu-e-Julieta"){
+                                            body = body + "Sabor 2: " + _sabor + "\n"; 
+                                        }
+                                        else{
+
+                                        }
+                                        Queue.pop();
+                                    }
+                                    
+                                }
+                                
                             saborVerify = true;
                             }
                         }
@@ -263,9 +722,27 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            string _borda = "Borda \n" ;  
-                            body = body + _borda; 
-                            bordaVerify = true;
+                            string _borda = "Borda: ";  
+                                switch (borda)
+                                {
+                                case 00:
+                                    _borda = _borda + "Sem Borda\n";
+                                    body = body + _borda;
+
+                                case 20:
+                                    _borda = _borda + "Catupiry\n";
+                                    body = body + _borda;
+
+                                case 30:
+                                    _borda = _borda + "Cheddar\n";
+                                    body = body + _borda;
+
+                                case 40:
+                                    _borda = _borda + "Chocolate\n";
+                                    body = body + _borda;
+                                
+                                }
+                                bordaVerify = true;
                             }
                         }
 
@@ -286,9 +763,28 @@ void Client::showClient(){
                              system ("cls");
                             }
                             else {
-                            cout<<"pesquisar bebida no arquivo cardapio"<<endl;
-                            string _bebida = "Bebida \n"; 
-                            body = body + _bebida;
+                            string _bebida = "Bebida: ";
+                                switch (bebida)
+                                {
+                                case 50: 
+                                    _bebida = _bebida + "Agua\n";
+                                    body = body + _bebida;
+                                case 51:
+                                    _bebida = _bebida + "Agua com gas\n";
+                                    body = body + _bebida;
+                                case 52:
+                                    _bebida = _bebida + "Refri lata\n";
+                                    body = body + _bebida;
+                                case 53:
+                                    _bebida = _bebida + "Refri 2litros\n";
+                                    body = body + _bebida;
+                                case 54:
+                                    _bebida = _bebida + "Suco\n";
+                                    body = body + _bebida;
+                                case 55:
+                                    _bebida = _bebida + "Sem Bebida\n";
+                                    body = body + _bebida;
+                                }
                             bebidaVerify = true;
                             }
                             
@@ -296,7 +792,7 @@ void Client::showClient(){
                         }
                         string observacao;
                         string nmesa;
-                        string mesa = "mesa=";
+                        string mesa = "Mesa: ";
                         cout << "Digite o numero da sua mesa (colado na mesa)" << endl;
                         cin >> nmesa;
                         mesa = mesa + nmesa + "\n";
@@ -304,12 +800,15 @@ void Client::showClient(){
                         cout << "Observacoes? " << endl;
                         cin.ignore();
                         getline(cin,observacao);
-                        string _observacao = observacao;
+                        string _observacao = "OBS: ";
+                        _observacao = _observacao + observacao + "\n";
                         body = body + _observacao;
-                        footer = footer + "\n[configuraçoes especiais entram aqui]\n";
-                        body = body + footer;
+                        body = body;
 
                         file.saveToFile("pedidos_pizza_sabor2", body );
+                        file.saveToFile("ativo", "sim");
+                        cout << "\nPedido Feito com Sucesso\n" <<endl;
+                        
                     }
                     
                     cout << "" << endl;
@@ -322,10 +821,6 @@ void Client::showClient(){
 
                 }
                 
-                   
-                    
-                
-
                 }
             }
     
