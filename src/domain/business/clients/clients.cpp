@@ -51,13 +51,13 @@ void Client::showClient(){
             cout<<"Selecione uma das opcoes abaixo:"<< endl;
             cout<<"1 - Realizar pedido"<< endl;
             cout<<"2 - Status do pedido"<< endl;
-            cout<<"3 - Fechar mesa"<< endl;
+            
            
             cout<<"Digite o numero da Opcao"<<endl;
             int _option;
             cin >> _option;
             setOption(_option);
-            if(!(getOption() == 1 || getOption() == 2 || getOption() == 3)){
+            if(!(getOption() == 1 || getOption() == 2)){
                 cout<<"Opcao Invalida"<<endl;
                 system("pause");
                 system("cls");
@@ -139,7 +139,7 @@ void Client::showClient(){
                              << "40 chocolate\n" << endl;
                         cin >> borda;
                             if (!(borda == 00 || borda == 20 || borda == 30 || borda == 40)){
-                             cout << "Opcao invvlida" << endl;
+                             cout << "Opcao invalida" << endl;
                              system ("pause");
                              system ("cls");
                             }
@@ -321,32 +321,6 @@ void Client::showClient(){
                     cout << "criar3ifs,umpracadaestado" << endl;
 
                 }
-                 else if(getOption() == 3){
-                     int encerramesa;
-                     bool mesaVerify = false;
-
-                    while(mesaVerify == false){
-                         cout << " Fechar mesa" << endl;
-                         cout << "Deseja fechar mesa? 1 - SIM ou 0 - NAO" << endl;
-                        cin >> encerramesa;
-                            if (!(encerramesa == 1 || encerramesa == 0) ){
-                             cout << "Opcao invalida" << endl;
-                             system ("pause");
-                             system ("cls");
-                            }
-                            else {
-                                if(encerramesa == 1){
-                                    cout << "Salvar mesa encerrada no arquivo de pedidos" << endl;
-                                    cout << "Compareca ao caixa" << endl;
-                                    mesaVerify = true;
-                                }
-                                else if (encerramesa == 0){
-                                    cout << "Naofecharmesa" << endl;
-                                    cout << "Seu pedido continua aberto!" << endl;
-                                    mesaVerify = true;
-                                }
-                            }
-                        }
                 
                    
                     
@@ -359,7 +333,6 @@ void Client::showClient(){
     system ("pause");
     system ("cls");
     }
-}
 
 int main(){
 

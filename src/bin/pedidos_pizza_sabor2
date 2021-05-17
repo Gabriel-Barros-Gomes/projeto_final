@@ -5,10 +5,10 @@ Pizza 2 Sabor(es)
 Tamanho p
 Sabor 1 [sabor entra aqui}
 Sabor 2 [sabor entra aqui}
-Borda [borda entra aqui]
-Bebida [bebida entra aqui]
-mesa=15
-nao
+Borda 
+Bebida 
+mesa=152
+n
 ##configurations##
 ativo=true
 id=pedidos
