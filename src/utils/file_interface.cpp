@@ -2,21 +2,13 @@
 
 
 bool File::saveToFile(string _fileName, string _text){
-  ofstream file;
+  fstream file;
   if(!file.is_open()){
       file.close();
   }
-  file.open(_fileName);
+  file.open(_fileName, ios::trunc);
   file << _text << "\n";
   file.close();
-}
-
-bool File::updateToFile(string _fileName, string _text){
-
-}
-
-bool File::deleteFile(string _fileName){
-
 }
 
 queue<string> File::readFile(string _fileName){
