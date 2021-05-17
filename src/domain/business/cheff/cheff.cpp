@@ -57,6 +57,7 @@ Cheff::~Cheff(){
 
 void Cheff::showCheff(){
     File file;
+    queue<string> Queue;
     bool optionVerify = false;
     cout << "cheff" << endl;
     cout << "Faca apenas um pedido por vez!" << endl;
@@ -78,9 +79,21 @@ void Cheff::showCheff(){
             }
             else{
                 if(getOption() == 1){
-
-                    cout << "Colocar pedidos em andamento por ordem de chegada" << endl;
-                    cout << "Pedido em andamento" << endl;
+                    Queue = file.readFile("ativo");
+                    queue<string> filasabor = file.readFile("qsabor");                     
+                            if (Queue.front()== "sim"){
+                            file.saveToFile("ativo", "em andamento");
+                            if (filasabor.front()== "1"){
+                            file.showFile("pedidos_pizza_sabor1"); 
+                            system("pause");}
+                            else if (filasabor.front()== "2"){
+                                file.showFile("pedidos_pizza_sabor2");
+                                system("pause");
+                            }
+                        }
+                    else{
+                        cout << "Pedido em andamento" << endl;
+                    }
                     system("pause");
                     optionVerify = true;
                 }
@@ -90,10 +103,12 @@ void Cheff::showCheff(){
                     cin >> _concluido;
                     setConcluido(_concluido);
                     if(getConcluido() == true){
-                        cout << "Numero da mesa:   " << "nmesa" << endl;
-                        cout << "Pedido detalhado: " <<  "colocaropedido" << endl;
+                         Queue = file.readFile("ativo");
+                        if (Queue.front()== "em andamento"){
+                            file.saveToFile("ativo", "finalizado");
+                        }
 
-                        cout << "Ir para o proximo pedido? Sim = 1 Não =0 " << endl;
+                        cout << "Ir para o proximo pedido? Sim = 1 Nao =0 " << endl;
                         bool _proximo;
                         cin >> _proximo;
                         setProximo(_proximo);
