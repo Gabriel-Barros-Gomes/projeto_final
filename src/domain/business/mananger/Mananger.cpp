@@ -36,15 +36,15 @@ File file;
         while(optionVerify == false){
            
             cout<<"Selecione uma das opcoes abaixo:"<< endl;
-            cout<< "1 - Alterar o cardápio" << endl;
+            cout<< "1 - Alterar o cardapio" << endl;
             cout<< "2 - CAIXA" << endl;
-            cout<< "3 - Faturamento" << endl;
+ 
            
             cout<<"Digite o numero da Opcao"<<endl;
             int _option;
             cin >> _option;
             setOption(_option);
-            if(!(getOption() == 1 || getOption() == 2 || getOption() == 3)){
+            if(!(getOption() == 1 || getOption() == 2)){
                 cout<<"Opcao Invalida"<<endl;
                 system("pause");
                 system("cls");
@@ -61,9 +61,6 @@ File file;
                     cin >> pesqmesa;
                     
                }
-                else if (getOption() == 3){
-                    cout << "temquefazerofaturamento" << endl;
-                }
                 }
                 }
                  system("cls");

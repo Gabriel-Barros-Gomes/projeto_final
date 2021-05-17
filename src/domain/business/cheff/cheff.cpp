@@ -90,7 +90,7 @@ void Cheff::showCheff(){
                     cin >> _concluido;
                     setConcluido(_concluido);
                     if(getConcluido() == true){
-                        cout << "Numero da mesa:   " << "colocarvariaveldamesa"<< endl;
+                        cout << "Numero da mesa:   " << "nmesa" << endl;
                         cout << "Pedido detalhado: " <<  "colocaropedido" << endl;
 
                         cout << "Ir para o proximo pedido? Sim = 1 Não =0 " << endl;

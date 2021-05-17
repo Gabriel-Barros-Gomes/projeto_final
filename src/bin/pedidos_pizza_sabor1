@@ -2,12 +2,12 @@ Realização de pedido
 Mesa=
 Pizza 1 Sabor(es)
 
-Tamanho P
+Tamanho p
 Sabor [sabor entra aqui}
 Borda [borda entra aqui]
 Bebida [bebida entra aqui]
 mesa=15
-nao
+n
 ##configurations##
 ativo=true
 id=pedidos
