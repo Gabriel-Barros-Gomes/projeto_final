@@ -2,11 +2,11 @@
 
 
 bool File::saveToFile(string _fileName, string _text){
-  fstream file;
+  ofstream file;
   if(!file.is_open()){
       file.close();
   }
-  file.open(_fileName, fstream::out);
+  file.open(_fileName);
   file << _text << "\n";
   file.close();
 }

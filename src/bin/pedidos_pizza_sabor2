@@ -1,17 +1,10 @@
 Realização de pedido
-Mesa=
 Pizza 2 Sabor(es)
 
 Tamanho p
-Sabor 1 [sabor entra aqui}
-Sabor 2 [sabor entra aqui}
+Sabor 1: Marguerita
+Sabor 2: Frango-com-catupiry
 Borda 
 Bebida 
-mesa=152
-n
-##configurations##
-ativo=true
-id=pedidos
-
-[configuraçoes especiais entram aqui]
-
+mesa=12
+nao
