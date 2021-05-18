@@ -46,16 +46,16 @@ public:
                 system("cls");
             }else{
                 if(getOption() == 1){
-                    system("cd bin");
+                    
                     system("adm.exe");
                     system("mananger.exe");
                 }
                 else if(getOption() == 2){
-                    system("cd bin");
+                   
                     system("clients.exe");
                 }
                 else if(getOption() == 3){
-                    system("cd bin");
+                    
                     system("adm.exe");
                     system("cheff.exe");
                 }

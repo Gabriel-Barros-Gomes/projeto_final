@@ -83,15 +83,18 @@ void Cheff::showCheff(){
                     queue<string> filasabor = file.readFile("qsabor");                     
                             if (Queue.front()== "sim"){
                             file.saveToFile("ativo", "em andamento");
-                            if (filasabor.front()== "1"){
-                            file.showFile("pedidos_pizza_sabor1"); 
-                            system("pause");}
-                            else if (filasabor.front()== "2"){
-                                file.showFile("pedidos_pizza_sabor2");
-                                system("pause");
+                                 if (filasabor.front()== "1"){
+                                 file.showFile("pedidos_pizza_sabor1"); 
+                                 system("pause");}
+                                     else if (filasabor.front()== "2"){
+                                         file.showFile("pedidos_pizza_sabor2");
+                                             system("pause");
                             }
                         }
-                    else{
+                    else if (Queue.front()== "finalizado"){
+                        cout << "Pedido finalizado" << endl;
+                    }
+                    else if (Queue.front()== "em andamento"){
                         cout << "Pedido em andamento" << endl;
                     }
                     system("pause");
@@ -113,7 +116,6 @@ void Cheff::showCheff(){
                         cin >> _proximo;
                         setProximo(_proximo);
                         if(getProximo() == true){
-                              cout << "retornartela" << endl; 
                                optionVerify = true;
                         }
                         
