@@ -25,7 +25,7 @@ queue<string> readFile(string _fileName);
 
 string showFile(string _fileName);
 
-
+string transferFile(string _file1, string _file2);
 };
 
 #endif

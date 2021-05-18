@@ -1,5 +1,9 @@
 #include<iostream>
 #include"file_interface.h"
+#include<time.h>
+#include <iomanip>
+#include <cctype>
+#include <cstdlib>
 
 using namespace std;
 
@@ -51,17 +55,28 @@ File file;
             }
             else{
                 if(getOption() == 1){
-                cout << "temquefazer" << endl;
-
+                system("notepad cardapio.txt");
+                
                 }
                 else if(getOption() == 2){
-                    string pesqmesa;
+                cout << "Pedidos:" << endl;
+                queue<string> filasabor = file.readFile("qsabor");
+                string letras[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"};
+                srand(time(NULL));
+                int x = rand() % 26;
 
-                    cout << "Entre com o numero da mesa que deseja procurar" << endl;
-                    cin >> pesqmesa;
-                    
-               }
+                if (filasabor.front()== "1"){
+                    file.transferFile("pedidos_pizza_sabor1", letras[x]);
+                    file.showFile(letras[x]);
                 }
+                else if(filasabor.front()== "2"){
+                    file.transferFile("pedidos_pizza_sabor2",  letras[x]);
+                    file.showFile( letras[x]);
+                }
+
+                
+               }
+                 }
                 }
                  system("cls");
 

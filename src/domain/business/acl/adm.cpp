@@ -77,11 +77,7 @@ bool optionVerify = false;
                     cin.ignore();
                     string senha;
                     getline(cin, senha);
-                    queue<string> Queue = file.readFile("users");
-                        while(!Queue.empty()){
-                            cout << Queue.front() << endl;
-                            Queue.pop();
-                        }
+                   
                         system("pause");
                     optionVerify = true;
                 }

@@ -286,21 +286,19 @@ void Client::showClient(){
                             }
                             else {
                                 string _borda = "Borda: ";  
-                                switch (borda)
-                                {
-                                case 00:
+                                if (borda==00){
                                     _borda = _borda + "Sem Borda\n";
                                     body = body + _borda;
-
-                                case 20:
+                                }
+                                else if(borda==20){
                                     _borda = _borda + "Catupiry\n";
                                     body = body + _borda;
-
-                                case 30:
+                                }
+                                else if(borda==30){
                                     _borda = _borda + "Cheddar\n";
                                     body = body + _borda;
-
-                                case 40:
+                                }
+                                else if(borda==40){
                                     _borda = _borda + "Chocolate\n";
                                     body = body + _borda;
                                 
@@ -308,7 +306,7 @@ void Client::showClient(){
                                 bordaVerify = true;
 
                             }
-                        }
+                        
                         bool bebidaVerify = false;
                         int bebida;
 
@@ -328,27 +326,31 @@ void Client::showClient(){
                             }
                             else {
                                 string _bebida = "Bebida: ";
-                                switch (bebida)
-                                {
-                                case 50: 
+                                if (bebida==50){ 
                                     _bebida = _bebida + "Agua\n";
                                     body = body + _bebida;
-                                case 51:
+                                }
+                                else if(bebida==51){
                                     _bebida = _bebida + "Agua com gas\n";
                                     body = body + _bebida;
-                                case 52:
+                                }
+                                else if(bebida==52){
                                     _bebida = _bebida + "Refri lata\n";
                                     body = body + _bebida;
-                                case 53:
+                                }
+                                else if(bebida==53){
                                     _bebida = _bebida + "Refri 2litros\n";
                                     body = body + _bebida;
-                                case 54:
+                                }
+                                else if(bebida==54){
                                     _bebida = _bebida + "Suco\n";
                                     body = body + _bebida;
-                                case 55:
+                                }
+                                else if(bebida==55){
                                     _bebida = _bebida + "Sem Bebida\n";
                                     body = body + _bebida;
                                 }
+                                
                             bebidaVerify = true;
                             }
                             
@@ -370,6 +372,7 @@ void Client::showClient(){
                         file.saveToFile("pedidos_pizza_sabor1", body );
                         file.saveToFile("ativo", "sim");
                         cout << "\nPedido Feito com Sucesso\n" <<endl;
+                    }
                     }
 
 
@@ -724,27 +727,24 @@ void Client::showClient(){
                             }
                             else {
                             string _borda = "Borda: ";  
-                                switch (borda)
-                                {
-                                case 00:
+                                if(borda==00){
                                     _borda = _borda + "Sem Borda\n";
                                     body = body + _borda;
-
-                                case 20:
+                                }
+                                else if(borda==20){
                                     _borda = _borda + "Catupiry\n";
                                     body = body + _borda;
-
-                                case 30:
+                                }
+                                else if(borda==30){
                                     _borda = _borda + "Cheddar\n";
                                     body = body + _borda;
-
-                                case 40:
+                                }
+                                else if(borda==40){
                                     _borda = _borda + "Chocolate\n";
                                     body = body + _borda;
-                                
                                 }
                                 bordaVerify = true;
-                            }
+                             }
                         }
 
                         bool bebidaVerify = false;
@@ -765,30 +765,33 @@ void Client::showClient(){
                             }
                             else {
                             string _bebida = "Bebida: ";
-                                switch (bebida)
-                                {
-                                case 50: 
+                                if(bebida==50){ 
                                     _bebida = _bebida + "Agua\n";
                                     body = body + _bebida;
-                                case 51:
+                                }
+                                else if(bebida==51){
                                     _bebida = _bebida + "Agua com gas\n";
                                     body = body + _bebida;
-                                case 52:
+                                }
+                                else if(bebida==52){
                                     _bebida = _bebida + "Refri lata\n";
                                     body = body + _bebida;
-                                case 53:
+                                }
+                                else if(bebida==53){
                                     _bebida = _bebida + "Refri 2litros\n";
                                     body = body + _bebida;
-                                case 54:
+                                }
+                                else if(bebida==54){
                                     _bebida = _bebida + "Suco\n";
                                     body = body + _bebida;
-                                case 55:
+                                }
+                                else if(bebida==55){
                                     _bebida = _bebida + "Sem Bebida\n";
                                     body = body + _bebida;
                                 }
                             bebidaVerify = true;
                             }
-                            
+    
 
                         }
                         string observacao;
@@ -814,17 +817,20 @@ void Client::showClient(){
                     
                     cout << "" << endl;
                     optionVerify = true;
-                }
+                }   
                 else if(getOption() == 2){
                     cout << " Status do pedido " << endl;
-                    cout << "buscarstatusdopedido dentrodoarquivodocheff" << endl;
-                    cout << "criar3ifs,umpracadaestado" << endl;
-
+                    queue<string> Fila = file.readFile("ativo");
+                    if (Fila.front() == "sim" || Fila.front()== "em andamento"){
+                        cout << "Pedido em andamento" << endl;
+                    }
+                    else {
+                        cout << "Pedido finalizado, retire na bancada" << endl;
+                    }
                 }
                 
                 }
             }
-    
 
     system ("pause");
     system ("cls");
